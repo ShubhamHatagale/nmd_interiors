@@ -1,0 +1,15 @@
+
+  
+  .hero-img-wrapper {
+    position: absolute;
+    top: 25vh;
+    left: 0;
+  }
+  
+  .overlay-image {
+    position: relative;
+    z-index: 1;
+  }
+
+  
+  
