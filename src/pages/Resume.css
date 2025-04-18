@@ -1,0 +1,92 @@
+.resume {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #312e2e;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .name {
+    font-size: 36px;
+    color: #312e2e;
+    margin-bottom: 10px;
+  }
+  
+  .job-title {
+    font-size: 20px;
+    color: #5e5b5b;
+  }
+  
+  .content {
+    margin-top: 30px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    color: #5e5b5b;
+    margin-bottom: 10px;
+  }
+  
+  .skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .skills-list li {
+    margin: 5px;
+    background-color: #c3bfbf;
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: #312e2e;
+    font-weight: bold;
+  }
+  
+  .experience,
+  .education {
+    margin-bottom: 20px;
+  }
+  
+  .job-position,
+  .education-degree {
+    color: #312e2e;
+    margin-top: 5px;
+  }
+  
+  .job-duration,
+  .education-duration {
+    color: #5e5b5b;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  .print-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #312e2e;
+    color: #f7f7f7;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .print-button:hover {
+    background-color: #5e5b5b;
+  }
+  

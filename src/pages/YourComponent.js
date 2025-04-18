@@ -2,13 +2,21 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ringtone from '../assets/notification/noti1.mp3';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
 
 
 const YourComponent = () => {
-    const [columnData, setColumnData] = useState(null);
+    const [columnData, setColumnData] = useState(4);
     const [isPlaying, setIsPlaying] = useState(false);
     const audioRef = useRef(new Audio(ringtone));
 
+    const showNotification = () => {
+        NotificationManager.info('Hello!', 'This is a desktop notification.', 3000, () => {
+          console.log('Notification clicked');
+        });
+      };
+      
     // const handleButtonClick = () => {
     //     toast.success('You have new notification!', { position: toast.POSITION.TOP_RIGHT });
     // };
@@ -36,10 +44,11 @@ const YourComponent = () => {
                 // alert("you have new notification")
                 if (data.totalItems > NotiCount) {
                     togglePlay()
+                    showNotification()
                     // toast.success('You have new notification!', { position: toast.POSITION.TOP_RIGHT });
-                    toast.success('You have new notification!', {
-                        position: toast.POSITION.TOP_RIGHT,
-                    });
+                    // toast.success('You have new notification!', {
+                    //     position: toast.POSITION.TOP_RIGHT,
+                    // });
 
                     sessionStorage.setItem('count', data.totalItems);
                 }
@@ -64,8 +73,11 @@ const YourComponent = () => {
             {columnData ? (
                 <>
                     <button onClick={togglePlay}>{isPlaying ? 'Pause' : 'Play'}</button>
+                    <NotificationContainer />
 
                     <p>Column value: {columnData}</p>
+                    <button onClick={showNotification}>Show Notification</button>
+
                     {/* <button onClick={handleButtonClick}>Show Notification</button> */}
                 </>
             ) : (

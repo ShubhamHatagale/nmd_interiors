@@ -45,3 +45,54 @@
 } */
 
 
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.title {
+  text-align: center;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.details-title {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.details-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.info-group {
+  flex: 1 1 300px;
+}
+
+.image-group {
+  flex: 1 1 200px;
+  margin-top: 20px;
+}
+
+.photo,
+.signature {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.other-details {
+  margin-top: 20px;
+}
+
+
